@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    box-sizing: border-box
+}
+a:not(#faq li a) {text-decoration: none; color:#ffffff;}
+a:link { color: inherit; }          /* Liens non visités */
+a:visited:not(#faq li a) { color: inherit; }     /* Liens visités */
+a:hover:not(#faq li a) { background: inherit; }  /* Liens survolés */
+a:active:not(#faq li a) { color: inherit; }         /* Liens actifs */
+::-webkit-scrollbar{
+    display: none;
+  }
+.affichageNonGere{
+    display: none;
+}
+@media (width < 320px) {
+    .affichageNonGere{
+        display: block;
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: aquamarine;
+        text-align: center;
+        z-index: 1;
+    }
+    .affichageNonGere p {
+        margin: 20px 5px 50px 5px;
+    }
+    .affichageNonGere img{
+        width: 30px;
+    }
+    #cvg{
+        position: relative;
+        display: inline-block;
+        top: -10px;
+        font-size: 0.8em;
+    }
+}
+/* début partie concernant le menu*/
+header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    overflow-y: visible;
+    height: 90px;
+}
+nav{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+
+}
+.menuLogo{
+    position: absolute;
+    left: 0;
+    width:150px;
+}
+@media (width < 597px) {
+    .menuLogo{
+        visibility: hidden;
+    }
+}
+.menuIcon{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+nav a, img{
+    position: relative;
+    height: 70px;
+}
+
+#iconBoutique{
+    height: 70px;
+}
+#formation:not(:target){
+    display: none;
+}
+#formation:target #selecteurMenuFormation{
+    position: fixed;
+    border-radius: 10px;
+    background-color: #0f7f3139;
+    width: 80px;
+    height: 70px;
+    top: 0px;
+    left: calc(50% + 90px );
+    }
+#selecteurMenuBoutique{
+    position: fixed;
+    border-radius: 10px;
+    background-color: #0f7f3139;
+    width: 80px;
+    height: 70px;
+    top: 0px;
+    left: calc(50% - 35px);
+}
+#boutique:not(:target) #selecteurMenuBoutique{
+    display: none;
+    }
+#plantTruck:not(:target){
+    display: none;
+}
+#plantTruck:target #selecteurMenuPlantTruck{
+    position: fixed;
+    border-radius: 10px;
+    background-color: #0f7f3139;
+    width: 80px;
+    height: 70px;
+    top: 0px;
+    left: calc(50% - 165px );
+    }
+#notreHistoire:not(:target) {
+    display:none;
+}
+#faq:not(:target) {
+    display: none;
+}
+#legal:not(:target) {
+    display: none;
+}
+/* début partie concernant le centre de page*/
+
+
+main{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #3700ff;
+
+}
+
+section{
+    position: absolute;   
+    bottom: 0px;
+    top:0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: scroll; 
+    gap: 50px;
+    scrollbar-width: none;
+    padding-top: 70px;
+    padding-bottom: 35px;
+    background-color: #ffffff;
+    z-index: 1; /*permet de passer la section target au premier plan concernant les titres et prix de l'autre section qui sont avec z-index = 1 pour qu'ils puissent s'afficher sur au dessus 
+    de l'image (possibilité de mettre h3 sous img pour cascade naturel mais pas logique niveau sementique html, on mettrait le titre aprés le contenu)*/
+}
+article{
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+h1{
+    position: relative;
+    top: 35px;
+    color:rgb(107, 143, 107);
+
+    
+}
+#boutique h2,#formation h2{
+    position: sticky;
+    top: 20px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    border-radius: 20px 0 0 20px;
+    margin-bottom: 140px;
+    color: rgb(107, 143, 107);
+}
+
+#boutique article, #formation article{
+    display: grid;
+    grid-template-columns: 30px calc(100% - 30px);
+}
+.agencementTitre{
+    background-color: #0f7f310e;
+    border-radius: 20px 0 0 20px;
+}
+.agencementProduit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #0f7f310e;
+    border-radius: 0px 20px 20px 0;
+    padding:20px 40px 20px 0px;
+    
+}
+.produits{
+    width: 200px;
+    height: 305px;
+    border-radius: 10px;
+    border-color: #0f7f3092;
+    border-width: 5px;
+    border-style: double;
+    margin-left: 30px;
+    overflow: hidden;
+}
+#formation .produits{
+    height: 270px;
+}
+.titreProduit{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.titreProduit div{
+    position: absolute;
+    z-index: 4;
+    font-size: 80%;
+    color: rgb(44, 95, 44);
+}
+#boutique h3, #formation h3{
+    position: absolute;
+    z-index: 1;
+    font-size: 80%;
+    color: rgb(44, 95, 44);
+}
+.prix{
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    color: rgb(107, 143, 107);
+    background-color: #89b798c6;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+}
+.formation .prix, .formation h3{
+    background-color: #89b798;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+}
+.produits img{
+    width: calc(100% + 70px);
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.produitbis{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+    opacity: 0;
+}
+.produitbis:hover{
+    opacity: 1;
+}
+.optionSelection{
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.panierSelection{
+    position: relative;
+    top: -7px;
+}
+.optionSelection input{
+    outline-style: none;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
+    left: -45px;
+    width: 37px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+.optionSelection img{
+    width: 30px;
+}
+.optionSelection .imagePanierProduit{ /*je dois indiquer .optionSelection avant pour augmenter le poid sinon c'est le parametre de .optionSlection img qui sera appliqué*/
+    width: 45px;
+}
+.favoriCheckbox{
+    display: none;
+}
+.optionSelection .coursCheckbox{
+    position: relative;
+    top: 0px;
+    left: -35px;
+    width: 18px;
+}
+.coeur{
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(images/iconCoeur.svg);
+    background-size: 100%;
+}
+.favoriCheckbox:checked + label {
+    background-image: url(images/iconCoeurChecked.svg);
+}
+/* fin partie concernant le centre de page*/
+
+/* début partie concernant le bas de page*/
+#plantTruck article, #notreHistoire article {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    background-color: #0f7f310e;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    border-radius: 20px;
+}
+.plantTruckImg, .notreHistoireImg{
+    width: 35%;
+    min-width: 280PX;
+    height: auto;
+    margin-top: 40px;
+    
+}
+#plantTruck article div p, #notreHistoire article div p{
+    overflow: hidden;
+    width: 280px;
+    height: auto;
+    margin: 0px 10px 20px 10px;
+}
+#plantTruck h2, #notreHistoire h2, #legal h2{
+    width: 280px;
+    color: rgb(107, 143, 107);
+    margin: 40px 0 40px 10px;
+}
+#legal h2{
+    text-decoration: underline solid;
+}
+#faq p,#legal p{
+    text-align: justify;
+    width: 100%;
+    height: auto;
+    padding: 10px 50px 20px 50px;
+    overflow: hidden;
+}
+#legal h3,#faq h3, #legal h4,#legal h5{
+    padding-left: 50px;
+    color: rgb(107, 143, 107);
+    font-size: 1.2em;
+    padding-bottom:20px;
+    padding-top: 20px;
+}
+#legal h4{
+    font-size: 1em;
+}
+#legal h5{
+    font-size: 0.8em;
+    padding-left: 70px;
+}
+#faq ul,#legal ul{
+    margin-left:60px;
+}
+#faq li,#legal li{
+    padding: 0 0 5px 10px;
+    text-decoration: solid;
+}
+.achat{
+    position: absolute;
+    top: 80px;
+    width: 40px;
+    right: 5px;
+    z-index: 1;
+}
+.achat:hover + .envoiFormulaire, .envoiFormulaire:hover{
+    display:block;
+}
+.envoiFormulaire{
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 5px;
+    left: 5px;
+    bottom: 45px;
+    background-color: #96d0a9;
+    z-index: 1;
+    border-radius: 10px;
+    border: solid 10px #89b798;
+    overflow: hidden;
+}
+.contenuFormulaire{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background-color: #96d0a9;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    overflow: scroll;
+}
+.contenuFormulaire h1{
+    top:0;
+}
+.zoneInformationCommande, #submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.zoneInformationCommande input{
+    width: 250px;
+}
+.zoneInformationCommande p{
+    margin: 20px;
+}
+.contenuFormulaire #message{
+    width: 250px;
+    height: 100px;
+    margin-left: calc(50% - 125px);
+}
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 35px;
+    background-color: #0f7f3092;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.6em;
+    color: #ffffff;
+}
+footer img{
+    height: 25px;
+    margin: 5px 2px 2px 2px;
+}
+footer .footerReseauSocial, .footerNotreHistoire, .footerEntreprise {
+    justify-content: center;
+    align-items: center;
+}
+.cvg{
+    position: relative;/*obligé de mettre un relative et un top pour placer correctement cvg car sortie du flux flex avec inlineblock*/
+    display: inline-block;
+    top: -6px;
+}
+/* début partie concernant le bas de page*/
