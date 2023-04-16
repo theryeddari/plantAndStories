@@ -25,6 +25,19 @@ a:active:not(#faq li a) { color: inherit; }         /* Liens actifs */
         text-align: center;
         z-index: 1;
     }
+    @media screen and (max-width: 320px) {
+        .affichageNonGere{
+            display: block;
+            position: fixed;
+            top: 0px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: aquamarine;
+            text-align: center;
+            z-index: 1;
+    }
+    }
     .affichageNonGere p {
         margin: 20px 5px 50px 5px;
     }
@@ -66,6 +79,11 @@ nav{
     width:150px;
 }
 @media (width < 597px) {
+    .menuLogo{
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 597px) {
     .menuLogo{
         visibility: hidden;
     }
