@@ -265,7 +265,19 @@ h1{
     opacity: 0;
 }
 .produitbis:hover{
-    opacity: 1;
+    animation-duration: 3s;
+    animation-name: secondeimages;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+}
+@keyframes secondeimages{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 .optionSelection{
     position: relative;
