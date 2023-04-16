@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="26.458334mm"
-   height="26.458334mm"
-   viewBox="0 0 26.458334 26.458334"
+   width="26.458042mm"
+   height="26.458338mm"
+   viewBox="0 0 26.458043 26.458338"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
@@ -25,9 +25,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      showguides="false"
-     inkscape:zoom="5.5304153"
-     inkscape:cx="35.440377"
-     inkscape:cy="36.16365"
+     inkscape:zoom="1.9552971"
+     inkscape:cx="-152.66222"
+     inkscape:cy="93.080485"
      inkscape:window-width="1920"
      inkscape:window-height="974"
      inkscape:window-x="-11"
@@ -38,28 +38,36 @@
      id="defs2">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="244.22259 : -208.83904 : 1"
-       inkscape:vp_y="-574.03557 : -818.83036 : 0"
-       inkscape:vp_z="72.268201 : -88.291563 : 1"
-       inkscape:persp3d-origin="186.66016 : -108.0332 : 1"
+       inkscape:vp_x="244.22258 : -208.83903 : 1"
+       inkscape:vp_y="-574.03556 : -818.83035 : 0"
+       inkscape:vp_z="72.2682 : -88.291558 : 1"
+       inkscape:persp3d-origin="186.66015 : -108.0332 : 1"
        id="perspective2230" />
   </defs>
   <g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-64.763387,-26.458322)">
-    <circle
-       style="fill:#1685b3;fill-opacity:1;fill-rule:evenodd;stroke:#47b147;stroke-width:0.173191;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+     transform="translate(-64.562354,-25.254892)">
+    <path
+       style="fill:#1685b3;fill-opacity:0;fill-rule:evenodd;stroke:#47b147;stroke-width:1.3762;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="path788"
-       cx="77.992554"
-       cy="39.687489"
-       r="13.142571" />
+       sodipodi:type="arc"
+       sodipodi:cx="90.869804"
+       sodipodi:cy="38.484058"
+       sodipodi:rx="25.61935"
+       sodipodi:ry="12.541066"
+       sodipodi:start="1.5649945"
+       sodipodi:end="4.7137393"
+       sodipodi:arc-type="arc"
+       d="M 91.018443,51.024913 A 25.61935,12.541066 0 0 1 68.726706,44.791675 25.61935,12.541066 0 0 1 68.669566,32.224756 25.61935,12.541066 0 0 1 90.904399,25.943004"
+       sodipodi:open="true" />
     <g
        id="g3943"
-       transform="matrix(0.43380932,0,0,0.46636778,28.179275,-25.127726)">
+       transform="matrix(0.38379184,0,0,0.38010808,36.650199,-12.688572)">
       <g
-         id="g3936">
+         id="g3936"
+         transform="translate(-4.210994,-3.6268635)">
         <path
            id="rect3024"
            style="fill:#1cb92b;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"

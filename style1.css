@@ -61,7 +61,8 @@ nav{
 }
 .menuLogo{
     position: absolute;
-    left: 0;
+    left: 5px;
+    top: 0px;
     width:150px;
 }
 @media (width < 597px) {
@@ -236,16 +237,20 @@ h1{
 .prix{
     position: absolute;
     z-index: 1;
-    top: 15px;
+    top: 270px;
+    left: 80px;
     color: rgb(107, 143, 107);
     background-color: #89b798c6;
     border-radius: 10px;
     padding: 0 5px 0 5px;
 }
-.formation .prix, .formation h3{
+.formation .prix{
+    top: 235px;
+}
+.formation h3{
     background-color: #89b798;
-    border-radius: 10px;
-    padding: 0 5px 0 5px;
+    padding: 0px 2px 1px 2px;
+    border-radius: 0 0 10px 10px;
 }
 .produits img{
     width: calc(100% + 70px);
@@ -296,7 +301,7 @@ input[type=number]::-webkit-inner-spin-button {
     width: 45px;
 }
 .favoriCheckbox{
-    display: none;
+    visibility: hidden;
 }
 .optionSelection .coursCheckbox{
     position: relative;
@@ -357,7 +362,14 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 10px 50px 20px 50px;
     overflow: hidden;
 }
-#legal h3,#faq h3, #legal h4,#legal h5{
+.question{
+    padding-left: 50px;
+    color: rgb(107, 143, 107);
+    font-size: 1.2em;
+    padding-bottom:20px;
+    padding-top: 20px;
+}
+#legal h3, #legal h4,#legal h5{
     padding-left: 50px;
     color: rgb(107, 143, 107);
     font-size: 1.2em;
@@ -381,7 +393,7 @@ input[type=number]::-webkit-inner-spin-button {
 .achat{
     position: absolute;
     top: 80px;
-    width: 40px;
+    width: 50px;
     right: 5px;
     z-index: 1;
 }
@@ -415,13 +427,23 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .contenuFormulaire h1{
     top:0;
+    text-align: center;
 }
-.zoneInformationCommande, #submit{
+.zoneInformationCommande input, #submit input{
+    height: 40px;
+    border-radius: 5px;
+}
+.zoneInformationCommande{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 100px;
+    row-gap: 50px;
+}
+#submit{
+    text-align: center;
 }
 .zoneInformationCommande input{
     width: 250px;
@@ -429,10 +451,17 @@ input[type=number]::-webkit-inner-spin-button {
 .zoneInformationCommande p{
     margin: 20px;
 }
-.contenuFormulaire #message{
+.contenuFormulaire #message, .contenuFormulaire .message{
     width: 250px;
     height: 100px;
     margin-left: calc(50% - 125px);
+}
+.flexColonneInput{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     position: fixed;
