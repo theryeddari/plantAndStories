@@ -1,20 +1,44 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box
 }
-a:not(#faq li a) {text-decoration: none; color:#ffffff;}
-a:link { color: inherit; }          /* Liens non visités */
-a:visited:not(#faq li a) { color: inherit; }     /* Liens visités */
-a:hover:not(#faq li a) { background: inherit; }  /* Liens survolés */
-a:active:not(#faq li a) { color: inherit; }         /* Liens actifs */
-::-webkit-scrollbar{
-    display: none;
-  }
-.affichageNonGere{
+
+a:not(#faq li a) { /*enleve le typage des liens sauf pour 4 les liste avec lien dans la FAQ*/
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Liens non visités */
+a:link {
+    color: inherit;
+}
+
+/* Liens visités */
+a:visited:not(#faq li a) {
+    color: inherit;
+}
+
+/* Liens survolés */
+a:hover:not(#faq li a) {
+    background: inherit;
+}
+
+/* Liens actifs */
+a:active:not(#faq li a) {
+    color: inherit;
+}
+
+
+::-webkit-scrollbar { /*pour l'esthetique suprime scrollbar sur le coté*/
     display: none;
 }
-@media (width < 320px) {
-    .affichageNonGere{
+
+.affichageNonGere { /*de base on n'affiche pas le message pour les écran trop petit*/
+    display: none;
+}
+
+@media (width < 320px) {/*on affiche message ecran trop petit si inférieur a 320px*/
+    .affichageNonGere {
         display: block;
         position: fixed;
         top: 0px;
@@ -25,8 +49,9 @@ a:active:not(#faq li a) { color: inherit; }         /* Liens actifs */
         text-align: center;
         z-index: 1;
     }
-    @media screen and (max-width: 320px) {
-        .affichageNonGere{
+
+    @media screen and (max-width: 320px) { /*meme chose mais ecrit avec ancienne forme pour plus de compatibilité iphone*/
+        .affichageNonGere {
             display: block;
             position: fixed;
             top: 0px;
@@ -36,85 +61,102 @@ a:active:not(#faq li a) { color: inherit; }         /* Liens actifs */
             background-color: aquamarine;
             text-align: center;
             z-index: 1;
+        }
     }
-    }
+
     .affichageNonGere p {
         margin: 20px 5px 50px 5px;
     }
-    .affichageNonGere img{
+
+    .affichageNonGere img {
         width: 30px;
     }
-    #cvg{
+
+    #cvg {
         position: relative;
         display: inline-block;
         top: -10px;
         font-size: 0.8em;
     }
 }
+
 /* début partie concernant le menu*/
-header{
+header {
     position: absolute;
     top: 0px;
     width: 100%;
-    overflow-y: visible;
     height: 90px;
 }
-nav{
+
+nav {
     position: absolute;
-    top:0;
+    top: 0;
     width: 100%;
     height: 70px;
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     backdrop-filter: blur(5px);
-
+    -webkit-backdrop-filter: blur(5px);/*defaut d'affichage sur certain iphone de backdrop blur*/
 }
-.menuLogo{
+
+.menuLogo {
     position: absolute;
     left: 5px;
     top: 0px;
-    width:150px;
+    width: 150px;
 }
-@media (width < 597px) {
-    .menuLogo{
+
+@media (width < 597px) { /*cache le logo si écran trop petit pour afficher icon menu + logo*/
+    .menuLogo {
         visibility: hidden;
     }
 }
-@media screen and (max-width: 597px) {
-    .menuLogo{
+
+@media screen and (max-width: 597px) {/*meme chose écrit différement pour iphone */
+    .menuLogo {
         visibility: hidden;
     }
 }
-.menuIcon{
+
+.menuIcon {
     position: absolute;
     display: flex;
     justify-content: center;
     gap: 45px;
 }
-nav a, img{
+
+nav a,
+img {
     position: relative;
     height: 70px;
 }
 
-#iconBoutique{
+#iconBoutique {
     height: 70px;
 }
-#formation:not(:target){
+/*cette partie du code permet d'afficher ou non la section voulu par rapport aux autre dans un contexte "one page" sans rechargement*/
+#apprentissage:not(:target) { /*on indique que si l'ancre apprentissage n'est pas la partie ciblé par l 'url alors on ne l'affiche pas*/
     display: none;
 }
-#formation:target #selecteurMenuFormation{
+
+#apprentissage:target #selecteurMenuFormation { /*si l'ancre et la partie ciblé par l'url alors on affiche le div qui joue le role de surbrillance pour l'icon correspondant*/
     position: fixed;
     border-radius: 10px;
     background-color: #0f7f3139;
     width: 90px;
     height: 70px;
     top: 0px;
-    left: calc(50% + 75px );
-    }
-#selecteurMenuBoutique{
+    left: calc(50% + 75px);
+}
+
+#boutique:not(:target) #selecteurMenuBoutique { /*de meme avec l'ancre boutique et son selecteur*/
+    display: none;
+}
+
+#selecteurMenuBoutique { 
     position: fixed;
     border-radius: 10px;
     background-color: #0f7f3139;
@@ -123,35 +165,39 @@ nav a, img{
     top: 0px;
     left: calc(50% - 40px);
 }
-#boutique:not(:target) #selecteurMenuBoutique{
-    display: none;
-    }
-#plantTruck:not(:target){
+
+
+
+#plantTruck:not(:target) { /*de meme avec l'ancre boutique et son selecteur*/
     display: none;
 }
-#plantTruck:target #selecteurMenuPlantTruck{
+
+#plantTruck:target #selecteurMenuPlantTruck {
     position: fixed;
     border-radius: 10px;
     background-color: #0f7f3139;
     width: 90px;
     height: 70px;
     top: 0px;
-    left: calc(50% - 165px );
-    }
-#notreHistoire:not(:target) {
-    display:none;
+    left: calc(50% - 165px);
 }
+
+#notreHistoire:not(:target) {
+    display: none;
+}
+
 #faq:not(:target) {
     display: none;
 }
+
 #legal:not(:target) {
     display: none;
 }
-/* début partie concernant le centre de page*/
 
+/* début partie concernant les 4 sections principale du site planttruck, boutique, notre histoire et formation*/
 
-main{
-    position:absolute;
+main {
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -159,38 +205,54 @@ main{
 
 }
 
-section{
-    position: absolute;   
+section {
+    position: absolute;
     bottom: 0px;
-    top:0px;
+    top: 0px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    overflow: scroll; 
+    overflow: scroll;
     gap: 50px;
     scrollbar-width: none;
     padding-top: 70px;
     padding-bottom: 35px;
     background-color: #ffffff;
-    z-index: 1; /*permet de passer la section target au premier plan concernant les titres et prix de l'autre section qui sont avec z-index = 1 pour qu'ils puissent s'afficher sur au dessus 
-    de l'image (possibilité de mettre h3 sous img pour cascade naturel mais pas logique niveau sementique html, on mettrait le titre aprés le contenu)*/
+    z-index: 1;/*dans la section, les titres produit sont caché par les balises img produit car les <img> sont placé aprés les <h> donc <img> audessus des <h>, 
+     pour palier au pb j'utilise un index:1 pour les titres produit mais je dois du coups attribué un zindex a la section active de meme niveau sinon 
+     les titre produit de la section boutique intérfére avec les autres section quand elles sont target. digression j'ai cru voir qu'on pouvait
+    ajouter du texte a une image avec css, peut etre plus malin d'utiliser ca la prochaine fois pour les titre de produit. */
 }
-article{
+/*concerne en grande partie les pages boutique et formation*/
+article {
     position: relative;
     top: 0;
     width: 100%;
 }
 
-h1{
+h1 {
     position: relative;
     top: 35px;
-    color:rgb(107, 143, 107);
+    color: rgb(107, 143, 107);
 
-    
+
 }
-#boutique h2,#formation h2{
+
+#boutique article,
+#apprentissage article {
+    display: grid;
+    grid-template-columns: 30px calc(100% - 30px);
+}
+
+.agencementTitre {
+    background-color: #0f7f310e;
+    border-radius: 20px 0 0 20px;
+}
+
+#boutique h2,
+#apprentissage h2 {
     position: sticky;
     top: 20px;
     writing-mode: vertical-lr;
@@ -200,15 +262,7 @@ h1{
     color: rgb(107, 143, 107);
 }
 
-#boutique article, #formation article{
-    display: grid;
-    grid-template-columns: 30px calc(100% - 30px);
-}
-.agencementTitre{
-    background-color: #0f7f310e;
-    border-radius: 20px 0 0 20px;
-}
-.agencementProduit{
+.agencementProduit {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -217,10 +271,11 @@ h1{
     width: 100%;
     background-color: #0f7f310e;
     border-radius: 0px 20px 20px 0;
-    padding:20px 40px 20px 0px;
-    
+    padding: 20px 40px 20px 0px;
+
 }
-.produits{
+
+.produits {
     width: 200px;
     height: 305px;
     border-radius: 10px;
@@ -230,31 +285,35 @@ h1{
     margin-left: 30px;
     overflow: hidden;
 }
-#formation .produits{
+
+#apprentissage .produits {
     height: 270px;
 }
-.titreProduit{
+
+.titreProduit {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-.titreProduit div{
+
+.titreProduit div {
     position: absolute;
-    z-index: 4;
     font-size: 80%;
     color: rgb(44, 95, 44);
 }
-#boutique h3, #formation h3{
+
+#boutique h3,
+#apprentissage h3 {
     position: absolute;
-    z-index: 1;
+    z-index: 1; /*on met le titre du produit avant la balise img (plus logique) mais image passe dessus titre donc zindex pour passer titre au dessus*/
     font-size: 80%;
     color: rgb(44, 95, 44);
 }
-.prix{
+
+.prix {
     position: absolute;
-    z-index: 1;
     top: 270px;
     left: 80px;
     color: rgb(107, 143, 107);
@@ -262,55 +321,65 @@ h1{
     border-radius: 10px;
     padding: 0 5px 0 5px;
 }
-.formation .prix{
-    top: 235px;
+
+.formation .prix { /*j'ai du parametrer un position du prix different pour les vidéos dans l'espace formation car le format de l'image ne collait pas mais j'aurais pu m'y prendre autrement pour éviter un paramétre sup*/
+    top: 235px; 
 }
-.formation h3{
+
+.formation h3 {
     background-color: #89b798;
     padding: 0px 2px 1px 2px;
     border-radius: 0 0 10px 10px;
 }
-.produits img{
-    width: calc(100% + 70px);
+
+.produits img {
+    width: calc(100% + 70px); /*les images sont composé d'un cadre blanc tout au tour, je n'en voulait pas et au lieu de toutes les retravailler j'ai preférer utilisé la fonction calc pour gerer le cadre blanc*/
     height: 100%;
     border-radius: 5px 5px 0 0;
 }
-.produitbis{
+
+.produitbis {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 5px 5px 0 0;
-    opacity: 0;
+    opacity: 0; 
 }
-.produitbis:hover{
+
+.produitbis:hover { /*lors du hover la deuxiéme images qui était transparente passe a opaque ca me permet de proser de vue différente du produit.*/
     animation-duration: 2.5s;
     animation-name: secondeimages;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-    animation-timing-function: cubic-bezier(.72,-0.22,.24,1.3);
+    animation-timing-function: cubic-bezier(.72, -0.22, .24, 1.3);
 }
-@keyframes secondeimages{
-    from{
-        opacity:0;
+
+@keyframes secondeimages {/* j utilise une animation pour rendre transparente la seconde image et je fais tourner en boucle pour avoir un visu s'alternant entre la premiere et deuxiéme img jusqu'a que l'utisateur déclanche un hover sur un autre produit*/
+    from {
+        opacity: 0;
     }
-    to{
-        opacity:1;
+
+    to {
+        opacity: 1;
     }
 }
-.optionSelection{
+
+.optionSelection { /*l'endroit il y a les option d'achat ou favori etc sous l'image du produit*/
     position: relative;
     top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
 }
-.panierSelection{
+
+.panierSelection {
     position: relative;
     top: -7px;
 }
-.optionSelection input{
+
+.optionSelection input {
     outline-style: none;
     border-radius: 5px;
     position: relative;
@@ -321,25 +390,25 @@ h1{
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
 }
-input[type=number]::-webkit-inner-spin-button {
+
+input[type=number]::-webkit-inner-spin-button { /*permets d'afficher les petites fleche pour incrementer le parnier , ne fonctionne pas sur le telephone surement des modification dans le futur dans les normes  */
     opacity: 1
 }
-.optionSelection img{
+
+.optionSelection img {
     width: 30px;
 }
-.optionSelection .imagePanierProduit{ /*je dois indiquer .optionSelection avant pour augmenter le poid sinon c'est le parametre de .optionSlection img qui sera appliqué*/
+
+.optionSelection .imagePanierProduit {
+    /*je dois indiquer .optionSelection avant pour augmenter le poid sinon c'est le parametre de .optionSlection img qui sera appliqué*/
     width: 45px;
 }
-.favoriCheckbox{
+
+.favoriCheckbox { /*je cache le checkbox de base */
     visibility: hidden;
 }
-.optionSelection .coursCheckbox{
-    position: relative;
-    top: 0px;
-    left: -35px;
-    width: 18px;
-}
-.coeur{
+
+.coeur { /*je dispose le label de l'input et lui met une image en forme de coeur */
     position: relative;
     display: inline-block;
     width: 25px;
@@ -347,13 +416,21 @@ input[type=number]::-webkit-inner-spin-button {
     background-image: url(images/iconCoeur.svg);
     background-size: 100%;
 }
-.favoriCheckbox:checked + label {
+
+.favoriCheckbox:checked+label { /*je lie l'imput qui est invisible au label avec le combinateur + et dit que du coup  si le label est coché (sous entendu l'input alors je change l image du label en un coeur rouge */
     background-image: url(images/iconCoeurChecked.svg);
 }
-/* fin partie concernant le centre de page*/
 
-/* début partie concernant le bas de page*/
-#plantTruck article, #notreHistoire article {
+.optionSelection .coursCheckbox { /*simple checkbox sans modifition */
+    position: relative;
+    top: 0px;
+    left: -35px;
+    width: 18px;
+}
+/* fin partie concernant les deux parties prinipales du site*/
+
+#plantTruck article, /* bien qu'il n'est pas la meme place consacré ces deux sections ont le meme mode de fonctionnement donc j'ai regroupé*/
+#notreHistoire article { 
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -364,73 +441,100 @@ input[type=number]::-webkit-inner-spin-button {
     padding-bottom: 50px;
     border-radius: 20px;
 }
-.plantTruckImg, .notreHistoireImg{
+
+.plantTruckImg, 
+.notreHistoireImg {
     width: 35%;
     min-width: 280PX;
     height: auto;
     margin-top: 40px;
-    
+
 }
-#plantTruck article div p, #notreHistoire article div p{
+
+#plantTruck article div p,
+#notreHistoire article div p {
     overflow: hidden;
     width: 280px;
     height: auto;
     margin: 0px 10px 20px 10px;
 }
-#plantTruck h2, #notreHistoire h2, #legal h2{
+
+#plantTruck h2,
+#notreHistoire h2,
+#legal h2 {
     width: 280px;
     color: rgb(107, 143, 107);
     margin: 40px 0 40px 10px;
 }
-#legal h2{
+
+/* fin partie concernant les 4 sections principales du site planttruck, boutique, notre histoire et formation*/
+/*partie qui concerne la FAQ et Les mentions obilgatoire*/
+#legal h2 {
     text-decoration: underline solid;
 }
-#faq p,#legal p{
+
+#faq p,
+#legal p {
     text-align: justify;
     width: 100%;
     height: auto;
     padding: 10px 50px 20px 50px;
     overflow: hidden;
 }
-.question{
+
+.question {
     padding-left: 50px;
     color: rgb(107, 143, 107);
     font-size: 1.2em;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
-#legal h3, #legal h4,#legal h5{
+
+#legal h3,
+#legal h4,
+#legal h5 {
     padding-left: 50px;
     color: rgb(107, 143, 107);
     font-size: 1.2em;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
-#legal h4{
+
+#legal h4 {
     font-size: 1em;
 }
-#legal h5{
+
+#legal h5 {
     font-size: 0.8em;
     padding-left: 70px;
 }
-#faq ul,#legal ul{
-    margin-left:60px;
+
+#faq ul,
+#legal ul {
+    margin-left: 60px;
 }
-#faq li,#legal li{
+
+#faq li,
+#legal li {
     padding: 0 0 5px 10px;
     text-decoration: solid;
 }
-.achat{
+
+.achat {
     position: absolute;
     top: 80px;
     width: 50px;
     right: 5px;
     z-index: 1;
 }
-.achat:hover + .envoiFormulaire, .envoiFormulaire:hover{
-    display:block;
+/*fin partie légale et faq*/
+/*Zone qui correspond à la partie d'envoi du formulaire avec les données collecté sur la page boutique et formation + input de renseignement client via petit icon panier  */
+.achat:hover+.envoiFormulaire,
+.envoiFormulaire:hover {
+    display: block;
 }
-.envoiFormulaire{
+
+.envoiFormulaire {
     display: none;
     position: absolute;
     top: 80px;
@@ -443,8 +547,9 @@ input[type=number]::-webkit-inner-spin-button {
     border: solid 10px #89b798;
     overflow: hidden;
 }
-.contenuFormulaire{
-    position:relative;
+
+.contenuFormulaire {
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: #96d0a9;
@@ -455,45 +560,57 @@ input[type=number]::-webkit-inner-spin-button {
     gap: 5px;
     overflow: scroll;
 }
-.contenuFormulaire h1{
-    top:0;
+
+.contenuFormulaire h1 {
+    top: 0;
     text-align: center;
 }
-.zoneInformationCommande input, #submit input{
+
+.zoneInformationCommande input,
+#submit input {
     height: 40px;
     border-radius: 5px;
 }
-.zoneInformationCommande{
+
+.zoneInformationCommande { /*permet sur de large écran  d'eviter que tout le formulaire de renseignement soit centrer sous forme colonne*/
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*permets lors de la reduction de l'affichage de faire passer l imput a la ligne evite un scroll horizontale pour acceder a tout les inputs */
     gap: 100px;
     row-gap: 50px;
 }
-#submit{
+
+#submit {
     text-align: center;
 }
-.zoneInformationCommande input{
+
+.zoneInformationCommande input {
     width: 250px;
 }
-.zoneInformationCommande p{
+
+.zoneInformationCommande p {
     margin: 20px;
 }
-.contenuFormulaire #message, .contenuFormulaire .message{
+
+.contenuFormulaire #message,
+.contenuFormulaire .message {
     width: 250px;
     height: 100px;
     margin-left: calc(50% - 125px);
 }
-.flexColonneInput{
+
+.flexColonneInput { /*permet avec les div de chaque groupe input dans le "renseignement clients" de les grouper et surtout d'avoir un affichage unifié en fonction de la longeur des inputs la div prends au plus grand, ca évite les décalages sur la colone*/
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-footer{
+/*fin zone formulaire + panier achat devis*/
+
+footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
@@ -506,17 +623,24 @@ footer{
     font-size: 0.6em;
     color: #ffffff;
 }
-footer img{
+
+footer img {
     height: 25px;
     margin: 5px 2px 2px 2px;
 }
-footer .footerReseauSocial, .footerNotreHistoire, .footerEntreprise {
+
+footer .footerReseauSocial,
+.footerNotreHistoire,
+.footerEntreprise {
     justify-content: center;
     align-items: center;
 }
-.cvg{
-    position: relative;/*obligé de mettre un relative et un top pour placer correctement cvg car sortie du flux flex avec inlineblock*/
+
+.cvg {
+    position: relative;
+    /*obligé de mettre un relative et un top pour placer correctement cvg car sortie du flux flex avec inlineblock*/
     display: inline-block;
     top: -6px;
 }
+
 /* début partie concernant le bas de page*/

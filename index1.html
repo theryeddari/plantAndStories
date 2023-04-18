@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="affichageNonGere">
+    <div class="affichageNonGere"><!--mise en place d'un message si dimension écran insufissante-->
         <p>
             Veuillez nous excuser votre matériel ne permet pas
             d'afficher notre site sur celui-ci.
@@ -28,7 +28,7 @@
             <a href="" class="cvg">Données<br>Cookies<br>CVG</a>
         </div>
     </div>
-    <header>
+    <header><!--menu principal-->
         <nav>
             <div class="menuLogo">
                 <img src="images/logo-acceuil.svg" alt="logo acceuil" class="logo-acceuil">
@@ -37,7 +37,7 @@
                 <a href="#plantTruck" title="Plant truck et Pop up shop"><img src="images/iconPlantTruck1.svg"
                         alt="PLant truck"></a>
                 <a href="#boutique" title="Boutique en ligne"><img src="images/icon-boutique.svg" alt="Boutique"></a>
-                <a href="#formation" title="Apprenez en plus sur les Plantes"><img src="images/iconFormation1.svg"
+                <a href="#apprentissage" title="Apprenez en plus sur les Plantes"><img src="images/iconFormation1.svg"
                         alt="formation"></a>
             </div>
 
@@ -45,12 +45,14 @@
 
     </header>
     <main>
-        <form action="mailto:thery-eddari@hotmail.fr?Subject=Devis%20internet" method="post" enctype="text/plain" autocomplete="off">
-            <section id="boutique">
-                <div id="selecteurMenuBoutique"></div>
+        <!--mise en place d'un formulaire dont la partie interactive de la boutique (achat-favoris, panier-devis) se trouve dedans-->
+        <form action="mailto:thery-eddari@hotmail.fr?Subject=Devis%20internet" method="post" enctype="text/plain"
+            autocomplete="off">
+            <section id="boutique"><!--premiere section concernant la boutique de plante le site dois s'ouvrir sur celle-ci-->
+                <div id="selecteurMenuBoutique"></div><!--permet de mettre en surbrillance la section active du site ici la boutique-->
                 <h1>Boutique</h1>
                 <article class="bouture">
-                    <div class="agencementTitre">
+                    <div class="agencementTitre"><!--entourer d'une div pour deplacacer verticalement dans la grille a deux colonne mise en place-->
                         <h2>Bouture</h2>
                     </div>
                     <div class="agencementProduit">
@@ -60,14 +62,14 @@
                                 <p class="prix">4.50€</p>
                                 <img src="images/produits/boutures/alocasia-azlanii.jpg" alt="produits">
                                 <img src="images/produits/boutures/alocasia-azlanii1.jpg" alt="produits-bis"
-                                    class="produitbis">
+                                    class="produitbis"><!--apparait grace au hover-->
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
                                     <img src="images/icon-panier.svg" alt="panier" class="imagePanierProduit">
                                     <input type="number" name="alocasia-azlanii" value="0">
                                     <input type="checkbox" class="favoriCheckbox" id="myCheckbox1" name="favori">
-                                    <label class="coeur" for="myCheckbox1"></label>
+                                    <label class="coeur" for="myCheckbox1"></label><!--mmise en place coeur favori en cachant box check initial-->
                                 </div>
                             </div>
                         </div>
@@ -548,8 +550,8 @@
                     </div>
                 </article>
             </section>
-            <section id="formation">
-                <div id="selecteurMenuFormation"></div>
+            <section id="apprentissage"><!--seconde section concernant les formations -->
+                <div id="selecteurMenuFormation"></div><!--permet de mettre en surbrillance la section active du site ici la formation-->
                 <h1>Formation</h1>
                 <article class="formation" id="conseils">
                     <div class="agencementTitre">
@@ -563,7 +565,8 @@
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
-                                    <a href="testconseil.pdf" target="_blank"><img src="images/telechargement.svg" alt="telecharger"></a>
+                                    <a href="testconseil.pdf" target="_blank"><img src="images/telechargement.svg"
+                                            alt="telecharger"></a>
                                     <input type="checkbox" class="favoriCheckbox" id="myCheckbox30" name="favori">
                                     <label class="coeur" for="myCheckbox30"></label>
                                 </div>
@@ -576,7 +579,8 @@
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
-                                    <a href="testconseil.pdf" target="_blank"><img src="images/telechargement.svg" alt="telecharger"></a>
+                                    <a href="testconseil.pdf" target="_blank"><img src="images/telechargement.svg"
+                                            alt="telecharger"></a>
                                     <input type="checkbox" class="favoriCheckbox" id="myCheckbox31" name="favori">
                                     <label class="coeur" for="myCheckbox31"></label>
                                 </div>
@@ -589,7 +593,8 @@
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
-                                    <a href="testconseil.pdf" target="_blank"><img src="images/telechargement.svg" alt="telecharger"></a>
+                                    <a href="testconseil.pdf" target="_blank"><img src="images/telechargement.svg"
+                                            alt="telecharger"></a>
                                     <input type="checkbox" class="favoriCheckbox" id="myCheckbox32" name="favori">
                                     <label class="coeur" for="myCheckbox32"></label>
                                 </div>
@@ -605,7 +610,8 @@
                         <div class="produits">
                             <div class="titreProduit">
                                 <p class="prix">1.50€</p>
-                                <iframe width="200" height="225" src="https://youtube.com/embed/tjfRz08-IxA" allowfullscreen></iframe>
+                                <iframe width="200" height="225" src="https://youtube.com/embed/tjfRz08-IxA"
+                                    allowfullscreen></iframe>
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
@@ -619,7 +625,8 @@
                         <div class="produits">
                             <div class="titreProduit">
                                 <p class="prix">4.50€</p>
-                                <iframe width="200" height="225" src="https://youtube.com/embed/JC3ztA3FdzA" allowfullscreen></iframe>
+                                <iframe width="200" height="225" src="https://youtube.com/embed/JC3ztA3FdzA"
+                                    allowfullscreen></iframe>
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
@@ -633,7 +640,8 @@
                         <div class="produits">
                             <div class="titreProduit">
                                 <p class="prix">4.50€</p>
-                                <iframe width="200" height="225" src="https://youtube.com/embed/-leUWhCVHJY" allowfullscreen></iframe>
+                                <iframe width="200" height="225" src="https://youtube.com/embed/-leUWhCVHJY"
+                                    allowfullscreen></iframe>
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
@@ -647,73 +655,78 @@
                         <div class="produits">
                             <div class="titreProduit">
                                 <p class="prix">4.50€</p>
-                                <iframe width="200" height="225" src="https://youtube.com/embed/gZMkPTuAGLM" allowfullscreen></iframe>
+                                <iframe width="200" height="225" src="https://youtube.com/embed/gZMkPTuAGLM"
+                                    allowfullscreen></iframe>
                             </div>
                             <div class="optionSelection">
                                 <div class="panierSelection">
                                     <img src="images/icon-panier.svg" alt="panier" class="imagePanierProduit">
                                     <input type="checkbox" class="coursCheckbox" name="Dupliquer par In vitro">
                                     <input type="checkbox" class="favoriCheckbox" id="myCheckbox36" name="favori">
-                                    <label class="coeur" for="myCheckbox36"></label> <!-- la class coeur permet via css d'ajouter une image avant aprés à la place de la box-->
-                                    
+                                    <label class="coeur" for="myCheckbox36"></label>
+                                    <!-- la class coeur permet via css d'ajouter une image avant aprés à la place de la box-->
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </article>
             </section>
-            <img src="images/iconAchat.svg" alt="devis" class="achat">
+            <img src="images/iconAchat.svg" alt="devis" class="achat"><!--bouton sous hover qui permet d'afficher le formulaire de demande de devis + envoi formulaire principal (site boutique + formation) dont il fait parti-->
             <div class="envoiFormulaire">
-                <div class="contenuFormulaire">
+                <div class="contenuFormulaire"><!--zone sous flex column-->
                     <h1>Devis et commande</h1>
-                    <p>Aprés avoir reçu votre souhait de commande, notre équipe vérifira les stocks et vous enverra un devis
+                    <p>Aprés avoir reçu votre souhait de commande, notre équipe vérifira les stocks et vous enverra un
+                        devis
                         avec le délai et les coups de livraison ainsi qu'un lien de paiement (Valide 24h). <br>
-                    Nous expedirons la commande des confirmations du paiement. <br> L'envoi de la demande de votre devis passe par votre application de boite mail
-                    et prend en compte votre panier, veuillez cliquer dans votre application sur le bouton d'envoi du mail sans modifier le contenu de celui-ci :).
+                        Nous expedirons la commande des confirmations du paiement. <br> L'envoi de la demande de votre
+                        devis passe par votre application de boite mail
+                        et prend en compte votre panier, veuillez cliquer dans votre application sur le bouton d'envoi
+                        du mail sans modifier le contenu de celui-ci :).
                     </p>
-                <div>
-                <div class="zoneInformationCommande">
-                <div class="flexColonneInput">
-                <label class="nom" for="nom">Nom:</label>
-                <input type="text" id="nom" name="nom">
-                <label class="prenom" for="prenom">Prenom:</label>
-                <input type="text" id="prenom" name="prenom">
-                </div>
-                <div class="flexColonneInput">
-                <label class="ville" for="ville">Ville:</label>
-                <input type="text" id="ville" name="ville">
-                <label class="adresse" for="adresse">Adresse:</label>
-                <input type="text" id="adresse" name="addresse">
-                <label class="complementAdresse" for="complementAdresse">Completement d'adresse:</label>
-                <input type="text" id="complementAdresse" name="complementAddresse">
-                </div>
-                <div class="flexColonneInput">
-                <label class="mail" for="mail">Mail:</label>
-                <input type="email" id="mail" name="mail">
-                <label class="tel" for="tel">Telephone:</label>
-                <input type="tel" id="tel" name="tel" >
-                </div>
-                </div>
-                <label class="message" for="message">Information suplémentaires:</label>
-                <div>
-                <div class="zoneMessage" class="flexColonneInput">
-                    <textarea id="message" name="Message">
+                    <div>
+                        <div class="zoneInformationCommande"><!--zone sous row pour prendre tout l espace possible sur grand écran pour eviter que tout sois au milieu (car depend d'une zone flex column center)-->
+                            <div class="flexColonneInput"><!--permet de grouper sous forme de colonne des imputs de meme information dans une configuration sous row (flex), necessaire quand zone d'affichage reduite pour une bonne organisation -->
+                                <label class="nom" for="nom">Nom:</label>
+                                <input type="text" id="nom" name="nom">
+                                <label class="prenom" for="prenom">Prenom:</label>
+                                <input type="text" id="prenom" name="prenom">
+                            </div>
+                            <div class="flexColonneInput">
+                                <label class="ville" for="ville">Ville:</label>
+                                <input type="text" id="ville" name="ville">
+                                <label class="adresse" for="adresse">Adresse:</label>
+                                <input type="text" id="adresse" name="addresse">
+                                <label class="complementAdresse" for="complementAdresse">Completement d'adresse:</label>
+                                <input type="text" id="complementAdresse" name="complementAddresse">
+                            </div>
+                            <div class="flexColonneInput">
+                                <label class="mail" for="mail">Mail:</label>
+                                <input type="email" id="mail" name="mail">
+                                <label class="tel" for="tel">Telephone:</label>
+                                <input type="tel" id="tel" name="tel">
+                            </div>
+                        </div>
+                        <label class="message" for="message">Information suplémentaires:</label>
+                        <div>
+                            <div class="zoneMessage" class="flexColonneInput">
+                                <textarea id="message" name="Message">
                 Si vous avez une precision à apporter sur la commande ou le devis.
                 </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="submit">
+                        <input type="submit" name="submit" value="Envoyer ma demande de devis">
+                        <input type="reset" name="reset" value="Supprimer mon panier">
+                    </div>
                 </div>
-                </div>
-                </div>
-                <div id="submit">
-                <input type="submit" name="submit" value="Envoyer ma demande de devis">
-                <input type="reset" name="reset" value="Supprimer mon panier">
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>    
-        </form>
-        <section id="plantTruck">
-            <div id="selecteurMenuPlantTruck">
+            </div>
+            </div>
+            </div>
+        </form><!--fin de la partie interactive du site grace au form-->
+        <section id="plantTruck"><!--troisieme section concernant le plant truck -->
+            <div id="selecteurMenuPlantTruck"><!--permet de mettre en surbrillance la section active du site ici le plant truck-->
             </div>
             <h1>Plant Truck et Popup Store</h1>
             <article>
@@ -753,7 +766,7 @@
                 <img src="images/popupstore.jpg" alt="Popup Store" class="plantTruckImg">
             </article>
         </section>
-        <section id="notreHistoire">
+        <section id="notreHistoire"><!--quatrieme section plus discrete concernant l'histoire de l'entreprise -->
             <h1>Notre Histoire</h1>
             <article>
                 <img src="images/notreHistoire.jpg" alt="Plante" class="notreHistoireImg">
@@ -803,7 +816,7 @@
             </article>
         </section>
         <section id="faq">
-            <h1>FAQ</h1>
+            <h1>FAQ</h1><!--cinquieme section -->
             <article>
                 <p>
                     Dans cet article, nous répondons aux questions les plus régulièrement posées.
@@ -811,71 +824,74 @@
                     vous pouvez nous contacter à l’adresse contact@plantandstories.com et nous vous
                     répondrons dans les meilleurs délais!
                 </p>
-                    <span class="question">les commandes sont-elles préparées et expédiées ?</span>
-                    <p>Toutes les commandes sont traitées du lundi au mercredi. Nous n’expédions volontairement
+                <span class="question">les commandes sont-elles préparées et expédiées ?</span>
+                <p>Toutes les commandes sont traitées du lundi au mercredi. Nous n’expédions volontairement
                     plus de plantes à partir du jeudi afin d’éviter qu’elles ne restent bloquées chez le
                     transporteur tout le week-end en cas de complication lors de l’expédition.</p>
-                    <span class="question">J’ai oublié une plante ou un accessoire mais je viens de valider ma commande, que faire?</span>
-                    <p>Si votre commande n’a pas encore été préparée ni expédiée, il est tout à fait possible de rajouter
+                <span class="question">J’ai oublié une plante ou un accessoire mais je viens de valider ma commande, que
+                    faire?</span>
+                <p>Si votre commande n’a pas encore été préparée ni expédiée, il est tout à fait possible de rajouter
                     des produits à votre commande. Pour ce faire, il suffit de nous envoyer un mail à l’adresse
                     contact@plantandstories.com et de nous indiquer la/les plante(s) et/ou les accessoires que vous
                     aimeriez
                     ajouter à votre commande. Nous nous chargerons de glisser les produits oubliés dans votre colis et
                     vous enverrons
                     par la suite les détails concernant le règlement des articles ajoutés.</p>
-                    <span class="question">Avec quel transporteur travaillez-vous ?</span>
-                    <p>la France métropolitaine, nous collaborons avec le transporteur GLS pour livrer vos commandes.
+                <span class="question">Avec quel transporteur travaillez-vous ?</span>
+                <p>la France métropolitaine, nous collaborons avec le transporteur GLS pour livrer vos commandes.
                     Pour la Belgique, nous faisons appel aux services de CHRONOPOST, UPS et MONDIAL RELAY.</p>
-                    <span class="question">Comment sont calculés les frais de port ?</span>
-                    <p>Les frais de port sont calculés en fonction du poids du colis et de l’adresse de livraison.</p>
-                    <span class="question">Quels sont les délais de livraison ?</span>
-                    <p>Les délais de livraison varient selon le transporteur choisi lors de sa commande.
+                <span class="question">Comment sont calculés les frais de port ?</span>
+                <p>Les frais de port sont calculés en fonction du poids du colis et de l’adresse de livraison.</p>
+                <span class="question">Quels sont les délais de livraison ?</span>
+                <p>Les délais de livraison varient selon le transporteur choisi lors de sa commande.
                     Pour la France métropolitaine, le délai indiqué par GLS pour expédier vos commandes est de 24h/48h.
                     Pour la Belgique, le délai de livraison est estimé à 2 à 4 jours pour Mondial Relay, à 48h pour UPS
                     et à 24h pour Chronopost.</p>
-                    <span class="question">Comment faire pour suivre mon colis pendant son acheminement ?</span>
-                    <p>Des mails vous seront envoyés tout au long du processus pour vous informer du statut
+                <span class="question">Comment faire pour suivre mon colis pendant son acheminement ?</span>
+                <p>Des mails vous seront envoyés tout au long du processus pour vous informer du statut
                     de votre colis, de la préparation de la commande jusqu’à sa prise en charge par le réseau GLS.
                     Un numéro de suivi vous sera également communiqué vous permettant de suivre de près l’avancée de
                     votre colis.</p>
-                    <span class="question">Quel est le site internet pour suivre son colis ?</span>
-                        <ul>
-                            <li><a href="https://gls-group.com/FR/fr/suivi-colis">GLS</a></li>
-                            <li><a href="https://www.chronopost.fr/fr/suivi-colis">CHRONOPOST</a></li>
-                            <li><a href="https://www.mondialrelay.fr/suivi-de-colis/">MONDIAL RELAY</a></li>
-                            <li><a href="https://www.ups.com/track?loc=fr_FR&requester=ST/">UPS</a></li>
-                        </ul>
-                    <span class="question">Que se passe-t-il si je ne suis pas à mon domicile lors de la livraison de ma commande
-                        ?</span>
-                    <p>Pas d'inquiétude, GLS essayera de re-livrer votre colis le lendemain ou le déposera dans un point
+                <span class="question">Quel est le site internet pour suivre son colis ?</span>
+                <ul>
+                    <li><a href="https://gls-group.com/FR/fr/suivi-colis">GLS</a></li>
+                    <li><a href="https://www.chronopost.fr/fr/suivi-colis">CHRONOPOST</a></li>
+                    <li><a href="https://www.mondialrelay.fr/suivi-de-colis/">MONDIAL RELAY</a></li>
+                    <li><a href="https://www.ups.com/track?loc=fr_FR&requester=ST/">UPS</a></li>
+                </ul>
+                <span class="question">Que se passe-t-il si je ne suis pas à mon domicile lors de la livraison de ma
+                    commande
+                    ?</span>
+                <p>Pas d'inquiétude, GLS essayera de re-livrer votre colis le lendemain ou le déposera dans un point
                     relais proche de chez vous.
                     Vous serez toujours informé par mail et/ou sms de l’endroit où se trouve votre colis.</p>
-                    <span class="question">Ma plante est arrivée en mauvais état, que faire ?</span>
-                    <p>Si votre plante a l’air d’avoir été trop bousculée lors de la livraison, merci de nous envoyer des
+                <span class="question">Ma plante est arrivée en mauvais état, que faire ?</span>
+                <p>Si votre plante a l’air d’avoir été trop bousculée lors de la livraison, merci de nous envoyer des
                     photos/vidéos
                     au moment du déballage par message via notre compte Instagram @plantandstories.shop ou par mail à
                     cette adresse : contact@plantandstories.com Nous constaterons aussitôt les éventuels dégâts et
                     traiterons votre réclamation. Pour accélérer le processus, merci de nous communiquer au même moment
                     votre numéro de commande ainsi que votre nom/prénom.</p>
-                    <span class="question">Il manque une plante ou un accessoire dans mon colis.</span>
-                    <p>L’erreur est humaine, nous ne sommes pas des robots :) Veuillez nous contacter
+                <span class="question">Il manque une plante ou un accessoire dans mon colis.</span>
+                <p>L’erreur est humaine, nous ne sommes pas des robots :) Veuillez nous contacter
                     à l’adresse contact@plantandstories.com ou nous envoyer un message sur notre compte
                     Instagram @plantandstories.shop afin de nous informer de cet oubli.
                     Merci de ne pas oublier de mentionner votre nom, prénom et votre numéro de commande afin
                     d'accélérer la prise en charge.</p>
-                    <span class="question">Est'il possible d’annuler une commande passée sur le site ?</span>
-                    <p>Si votre commande n’a pas encore été traitée, il est possible de l’annuler. Veuillez nous envoyer un
+                <span class="question">Est'il possible d’annuler une commande passée sur le site ?</span>
+                <p>Si votre commande n’a pas encore été traitée, il est possible de l’annuler. Veuillez nous envoyer un
                     mail à
                     l’adresse contact@plantandstories.com en nous indiquant votre numéro de commande et votre
                     nom/prénom.
-                    Dans le cas où votre commande a déjà été traitée et expédiée, il n’est plus possible de l’annuler.</p>
-                    <span class="question">Je n’ai pas trouvé de réponse à ma question à qui m’adresser ?</span>
-                    <p>Si vous n’avez pas trouvé de réponse à votre question dans cette FAQ, merci de nous
+                    Dans le cas où votre commande a déjà été traitée et expédiée, il n’est plus possible de l’annuler.
+                </p>
+                <span class="question">Je n’ai pas trouvé de réponse à ma question à qui m’adresser ?</span>
+                <p>Si vous n’avez pas trouvé de réponse à votre question dans cette FAQ, merci de nous
                     envoyer un mail à cette adresse : contact@plantandstories.com. Nous vous répondrons
                     dans les meilleurs délais.</p>
             </article>
         </section>
-        <section id="legal">
+        <section id="legal"><!--sixieme section -->
             <h1>Mentions Légales</h1>
             <article>
                 <h2>SOCIÉTÉ ET CONFIDENTIALITÉ DES DONNÉES</h2>
@@ -888,9 +904,9 @@
                     <li>Hébergeur du site : o2switch</li>
                     <li>Directeur de la publication : Mai-ly TRAN</li>
                 </ul>
-                    <h3>ARTICLE 1 - PRÉAMBULE</h3>
+                <h3>ARTICLE 1 - PRÉAMBULE</h3>
 
-                    <p>Soucieux du respect de votre vie privée, nous accordons une importance particulière à la
+                <p>Soucieux du respect de votre vie privée, nous accordons une importance particulière à la
                     confidentialité des données à caractère personnel qui nous sont transmises. <br>
                     Dans une volonté de transparence, nous avons mis en place une politique de confidentialité
                     (ci-après dénommée "Politique") reprenant la nature des données personnelles collectées,
@@ -898,17 +914,17 @@
                     données. <br>
                     Pour plus de renseignements, n'hésitez pas à contacter notre service client à
                     l'adresse : contact@plantandstories.com. <br></p>
-                    <h3>ARTICLE 2 - DONNÉES PERSONNELLES COLLECTÉES</h3>
-                    <h4>A. Nature des données collectées et traitées et mode de collecte.</h4>
+                <h3>ARTICLE 2 - DONNÉES PERSONNELLES COLLECTÉES</h3>
+                <h4>A. Nature des données collectées et traitées et mode de collecte.</h4>
 
-                    <p>collectons nous-mêmes vos données personnelles. <br>
+                <p>collectons nous-mêmes vos données personnelles. <br>
                     Nous recueillons directement des données personnelles auprès de vous notamment lorsque vous
                     effectuez les opérations
                     suivantes :
-                    </p>
-                    <h5>Passage de commande et inscription sur notre site Internet</h5>
+                </p>
+                <h5>Passage de commande et inscription sur notre site Internet</h5>
 
-                    <p>Lorsque vous faites un achat ou créez un compte sur notre site Internet
+                <p>Lorsque vous faites un achat ou créez un compte sur notre site Internet
                     https://www.plantandstories.com (ci-après dénommé
                     "Site"), nous collectons vos renseignements personnels nécessaires à la gestion de votre commande et
                     la livraison de votre
@@ -917,9 +933,9 @@
                     Nous ne collectons aucune donnée bancaire. Les informations bancaires sont traitées et stockées de
                     manière sécurisée par nos
                     prestataires de services de paiement agréés.
-                    </p>
-                    <h5>Abonnement à la newsletter</h5>
-                    <p>Si vous avez décidé de suivre l'aventure Plant and Stories par mail, nous utiliserons votre adresse
+                </p>
+                <h5>Abonnement à la newsletter</h5>
+                <p>Si vous avez décidé de suivre l'aventure Plant and Stories par mail, nous utiliserons votre adresse
                     e-mail afin de vous envoyer
                     toutes les dernières actualités et vous faire découvrir de nouveaux produits. Si vous ne souhaitez
                     plus recevoir ces newsletters,
@@ -932,9 +948,9 @@
                     données (RGPD). Il peut être amené à traiter
                     une partie de ces données mais uniquement pour notre compte, en accord avec nos instructions et avec
                     une obligation de confidentialité absolue.
-                    </p>
-                    <h5>Mesures d'audience</h5>
-                    <p>Nous utilisons les services de Google Analytics afin de mesurer le trafic, mieux comprendre
+                </p>
+                <h5>Mesures d'audience</h5>
+                <p>Nous utilisons les services de Google Analytics afin de mesurer le trafic, mieux comprendre
                     l'activité sur le Site en identifiant les rubriques
                     et les pages que vous consultez, et améliorer ses performances dans le but de faciliter votre
                     navigation et votre expérience en ligne. À ce titre,
@@ -947,9 +963,9 @@
                     générales sur les cookies et sur la façon de régler les paramètres
                     des cookies dans divers navigateurs.
                     Veuillez noter que restreindre les cookies peut avoir un impact sur la fonctionnalité du Site.
-                    </p>
-                    <h5>Participation à un jeu-concours, des sondages ou enquêtes de satisfaction</h5>
-                    <p>Lorsque vous participez à un jeu-concours, les informations que vous publiez dans ce cadre ou que
+                </p>
+                <h5>Participation à un jeu-concours, des sondages ou enquêtes de satisfaction</h5>
+                <p>Lorsque vous participez à un jeu-concours, les informations que vous publiez dans ce cadre ou que
                     vous nous transmettez de toute autre façon, les contenus que vous
                     nous soumettez pour le jeu-concours ainsi que toutes les données à caractère personnel pouvant être
                     incluses dans ces contenus seront enregistrés par nos soins afin de
@@ -959,10 +975,10 @@
                     demander diverses informations (âge, sexe, opinions personnelles, etc.).
                     Vous pouvez refuser de répondre à n'importe quelle question et vous retirer du sondage à tout
                     moment.
-                    </p>
+                </p>
 
-                    <h4>B. Conservation des informations</h4>
-                    <p>Nous conservons vos données personnelles pendant toute la durée de vie de votre compte.
+                <h4>B. Conservation des informations</h4>
+                <p>Nous conservons vos données personnelles pendant toute la durée de vie de votre compte.
                     À partir de trois ans d'inactivité sur votre compte, nous procéderons à la suppression de votre
                     compte et de vos informations personnelles.
                     Vos informations sont également conservées pour des obligations légales ou réglementaires, régler
@@ -970,45 +986,45 @@
                     abus ou appliquer nos modalités et conditions.
                     Les cookies de mesure d'audience, de publicité ciblée et de partage vers les réseaux sociaux se
                     déposent sur vos ordinateurs pendant une durée de 13 mois.</p>
-                    <h5>Hébergement des données</h5>
-                    <p>Le site Plant and Stories est hébergé par o2switch, dont le siège social est situé à l'adresse
+                <h5>Hébergement des données</h5>
+                <p>Le site Plant and Stories est hébergé par o2switch, dont le siège social est situé à l'adresse
                     ci-après :
                     222-224 Boulevard Gustave Flaubert, 63000 CLERMONT-FERRAND.
                     L'hébergeur peut être contacté au numéro de téléphone suivant : 04 44 44 60 40.</p>
-                    <h4>D. Transmission des données à des tiers</h4>
-                    <p>Nous ne commercialisons pas vos données à caractère personnel à des tiers.
+                <h4>D. Transmission des données à des tiers</h4>
+                <p>Nous ne commercialisons pas vos données à caractère personnel à des tiers.
                     Dans le but de vous offrir le meilleur service possible, nous transmettons vos données aux
                     prestataires de services qui soutiennent notre activité
                     et à qui l'on fait appel notamment pour les opérations suivantes :</p>
-                        <ul>
-                            <li>l'hébergement des données,</li>
-                            <li>le paiement sécurisé sur le Site,</li>
-                            <li>la lutte contre le fraude,</li>
-                            <li>la réalisation d'opérations de maintenance et de développement technique du Site.</li>
-                        </ul>
-                    <p>
+                <ul>
+                    <li>l'hébergement des données,</li>
+                    <li>le paiement sécurisé sur le Site,</li>
+                    <li>la lutte contre le fraude,</li>
+                    <li>la réalisation d'opérations de maintenance et de développement technique du Site.</li>
+                </ul>
+                <p>
                     Ces prestataires peuvent être amenés à traiter une partie de ces données mais uniquement pour
                     le compte et selon les instructions de la société Le jardin de Laura (ce sont des
                     sous-traitants).<br>
                     Nous ne transmettons pas de données personnelles en dehors de l'Union européenne.</p>
-                    <h4>E. Protection de vos données personnelles</h4>
-                    <p>Nous protégeons à 100% les données confidentielles de nos clients ainsi que celles de nos
+                <h4>E. Protection de vos données personnelles</h4>
+                <p>Nous protégeons à 100% les données confidentielles de nos clients ainsi que celles de nos
                     visiteurs.<br>
                     Pour sécuriser l'accès à vos données personnelles, nous avons adopté des mesures de sécurité
                     physiques, électroniques et administratives incluant
                     l'utilisation de pare-feu étendus et de mots de passe.</p>
-                    <h3>ARTICLE 3 - DROITS DE L'UTILISATEUR</h3>
-                    <p>En application de la réglementation applicable aux données à caractère personnel, vous disposer des
+                <h3>ARTICLE 3 - DROITS DE L'UTILISATEUR</h3>
+                <p>En application de la réglementation applicable aux données à caractère personnel, vous disposer des
                     droits suivants :</p>
-                        <ul>
-                            <li>le droit d'accès à vos données personnelles ;</li>
-                            <li>le droit de rectification de vos données personnelles ;</li>
-                            <li>le droit de suppression des données personnelles ;</li>
-                            <li>le droit de s'opposer au traitement de vos données ;</li>
-                            <li>le droit à la portabilité de vos données personnelles ;</li>
-                            <li>le droit de déterminer le sort de vos données après la mort.</li>
-                        </ul>
-                    <p>
+                <ul>
+                    <li>le droit d'accès à vos données personnelles ;</li>
+                    <li>le droit de rectification de vos données personnelles ;</li>
+                    <li>le droit de suppression des données personnelles ;</li>
+                    <li>le droit de s'opposer au traitement de vos données ;</li>
+                    <li>le droit à la portabilité de vos données personnelles ;</li>
+                    <li>le droit de déterminer le sort de vos données après la mort.</li>
+                </ul>
+                <p>
                     Vous pouvez exercer ces droits en nous contactant à l'adresse suivante : 8 rue Elisa Lemonnier,
                     75012 Paris ou par e-mail à l'adresse
                     contact@plantandstories.com. <br>
@@ -1026,8 +1042,8 @@
                     sur le site https://www.cnil.fr
                     ou saisir tout juge compétent.</p>
 
-                    <h3>ARTICLE 4 - SITES TIERS/LIENS</h3>
-                    <p>Notre Site peut contenir des liens hypertextes vers d'autres sites web qui ne sont ni exploités ni
+                <h3>ARTICLE 4 - SITES TIERS/LIENS</h3>
+                <p>Notre Site peut contenir des liens hypertextes vers d'autres sites web qui ne sont ni exploités ni
                     contrôlés par la société Le jardin de Laura.
                     Veuillez noter que cette Politique s'applique uniquement aux données personnelles que nous
                     collectons sur ce Site. Dès lors, nous ne serons pas
@@ -1037,42 +1053,42 @@
                     peuvent différer de celles présentées dans cette Politique.
                     Ainsi, nous vous recommandons de lire attentivement la politique de confidentialité de chaque site
                     web que vous visitez.</p>
-                    <h3>ARTICLE 5 - CONSENTEMENT</h3>
-                    <p>En utilisant notre Site, vous déclarez accepter les termes de la présente Politique et consentez à
+                <h3>ARTICLE 5 - CONSENTEMENT</h3>
+                <p>En utilisant notre Site, vous déclarez accepter les termes de la présente Politique et consentez à
                     ce que nous collections et traitions vos données
                     personnelles conformément à cette Politique. <br>
                     Notre politique de confidentialité s'applique au Site et à toutes les données personnelles que vous
                     nous fournissez directement ou indirectement.
                     En cas de désaccord avec les termes de la Politique, nous vous invitons à ne pas utiliser notre
                     Site.</p>
-                    <h3>ARTICLE 6 - ÂGE DE CONSENTEMENT</h3>
-                    <p>Notre site Internet Plant and Stories est destiné aux personnes majeures ou aux personnes mineures
+                <h3>ARTICLE 6 - ÂGE DE CONSENTEMENT</h3>
+                <p>Notre site Internet Plant and Stories est destiné aux personnes majeures ou aux personnes mineures
                     ayant l'autorisation de leur représentant légal
                     leur permettant d'effectuer une commande sur le Site. <br>
                     Nous ne collectons, ni traitons en connaissance de cause des données personnelles relatives à des
                     mineurs.</p>
-                    <h3>ARTICLE 7 - MODIFICATIONS APPORTÉES À LA PRÉSENTE POLITIQUE DE
-                        CONFIDENTIALITÉ</h3>
-                    <p>La Politique est susceptible d'être mise à jour à tout moment par nos soins afin de garantir sa
+                <h3>ARTICLE 7 - MODIFICATIONS APPORTÉES À LA PRÉSENTE POLITIQUE DE
+                    CONFIDENTIALITÉ</h3>
+                <p>La Politique est susceptible d'être mise à jour à tout moment par nos soins afin de garantir sa
                     conformité avec le droit en vigueur et ces modifications
                     prendront effet immédiatement. Par conséquent, nous vous invitons à venir la consulter régulièrement
                     pour prendre connaissance des derniers changements qui lui seront apportés.</p>
-                    <h3>ARTICLE 8 - DROIT APPLICABLE</h3>
-                    <p>La présente Politique est régie par la loi française et soumise à la compétence des tribunaux du
+                <h3>ARTICLE 8 - DROIT APPLICABLE</h3>
+                <p>La présente Politique est régie par la loi française et soumise à la compétence des tribunaux du
                     siège social de la société Le jardin de Laura, sous réserve d'une attribution de
                     compétence spécifique découlant d'un texte de loi ou réglementaire particulier.</p>
             </article>
             <article>
                 <h2>CONDITIONS GENERALES DE VENTE</h2>
-                    <h3>ARTICLE 1 - PRÉAMBULE</h3>
-                    <p>Les présentes Conditions Générales de Vente (ci-après "CGV") sont conclues entre d'une part la
+                <h3>ARTICLE 1 - PRÉAMBULE</h3>
+                <p>Les présentes Conditions Générales de Vente (ci-après "CGV") sont conclues entre d'une part la
                     société Le jardin de Laura, SAS au capital de 1 000€ immatriculée au RCS de Paris
                     sous le numéro 88866161800015, ayant son siège social au 8 rue Elisa Lemonnier 75012 Paris, et
                     d'autre part, toute personne ayant effectué un achat du le site www.plantandstories.com,
                     ci-après dénommée le "Client". Tout achat sur le site www.plantandstories.com (ci-après le "Site")
                     entraîne automatiquement l'acceptation de l'intégralité de ces conditions dont le Client
                     reconnaît avoir pris connaissance préalablement à sa commande.</p>
-                    <h3>ARTICLE 2 - OBJET DES CGV</h3>
+                <h3>ARTICLE 2 - OBJET DES CGV</h3>
                 <p>Les présentes CGV ont pour objet de définir les conditions dans lesquelles les Clients peuvent
                     accéder au Site et commander des produits Plant and Stories, et de détailler les droits et
                     obligations de Plant and Stories et des Clients. Elles précisent en outre les modalités de commande
@@ -1084,7 +1100,7 @@
                 <p>Plant and Stories se réserve le droit de modifier ses CGV à tout moment. En cas de modification de
                     ces dernières, les CGV applicables restent celles qui étaient en vigueur au moment
                     de la commande faite par le Client.</p>
-                    <h3>ARTICLE 3 - PRODUITS</h3>
+                <h3>ARTICLE 3 - PRODUITS</h3>
                 <p>Plant and Stories s'efforce de décrire les produits proposés à la vente de la manière la plus précise
                     et exacte possible et s'engage à ce que les photographies des produits soient
                     le plus conforme possible aux produits qui seront effectivement livrés aux Clients. Toutefois, si
