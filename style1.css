@@ -483,11 +483,10 @@ input[type=number]::-webkit-inner-spin-button { /*permets d'afficher les petites
 }
 
 .question {
-    padding-left: 50px;
+    display: inline-block;
     color: rgb(107, 143, 107);
     font-size: 1.2em;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 50px 20px 50px;
 }
 
 #legal h3,
