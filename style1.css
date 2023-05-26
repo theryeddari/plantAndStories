@@ -3,7 +3,7 @@
     box-sizing: border-box
 }
 
-a:not(#faq li a) { /*enleve le typage des liens sauf pour 4 les liste avec lien dans la FAQ*/
+a:not(#faq li a) { /*enleve le typage des liens sauf pour les 4 de la liste dans la FAQ*/
     text-decoration: none;
     color: #ffffff;
 }
@@ -49,7 +49,7 @@ a:active:not(#faq li a) {
         text-align: center;
         z-index: 1;
     }
-
+}
     @media screen and (max-width: 320px) { /*meme chose mais ecrit avec ancienne forme pour plus de compatibilité iphone*/
         .affichageNonGere {
             display: block;
@@ -78,7 +78,6 @@ a:active:not(#faq li a) {
         top: -10px;
         font-size: 0.8em;
     }
-}
 
 /* début partie concernant le menu*/
 header {
@@ -142,7 +141,7 @@ img {
     display: none;
 }
 
-#apprentissage:target #selecteurMenuFormation { /*si l'ancre et la partie ciblé par l'url alors on affiche le div qui joue le role de surbrillance pour l'icon correspondant*/
+#apprentissage:target #selecteurMenuFormation { /*si l'ancre est la partie ciblé par l'url alors on affiche le div qui joue le role de surbrillance pour l'icon correspondant*/
     position: fixed;
     border-radius: 10px;
     background-color: #0f7f3139;
