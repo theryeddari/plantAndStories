@@ -607,7 +607,7 @@ input[type=number]::-webkit-inner-spin-button { /*permets d'afficher les petites
     align-items: center;
 }
 /*fin zone formulaire + panier achat devis*/
-
+/* début partie concernant le bas de page*/
 footer {
     position: fixed;
     bottom: 0px;
@@ -641,4 +641,4 @@ footer .footerReseauSocial,
     top: -6px;
 }
 
-/* début partie concernant le bas de page*/
+/* fin partie concernant le bas de page*/
